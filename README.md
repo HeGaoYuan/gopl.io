@@ -19,3 +19,13 @@ book; you can safely ignore them.  In a few cases, programs
 have been reformatted in an unnatural way so that they can be presented
 in stages in the book.
 
+## How to run it on code-server?
+
+```
+docker run -it --name gopl-io -p 80:8080 \
+  -u "$(id -u):$(id -g)" \
+  -e "DOCKER_USER=$USER" \
+  -e "PASSWORD=123456" \
+  hegaoyuan/gopl.io:code-server
+```
+
